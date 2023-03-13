@@ -34,3 +34,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+
+if ( ! function_exists( 'add_filter' ) ) {
+	header( 'Status: 403 Forbidden' );
+	header( 'HTTP/1.1 403 Forbidden' );
+	exit();
+}
+
+if ( ! defined( 'MUHIAISEO_FILE' ) ) {
+	define( 'MUHIAISEO_FILE', __FILE__ );
+}
+
+// Load the Muhi AI SEO plugin.
+require_once dirname( MUHIAISEO_FILE ) . '/muhi-ai-seo-main.php';
